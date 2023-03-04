@@ -9,16 +9,16 @@ void display();
 int *a;
 int rear  = -1;
 int front = -1;
-int MAX;
+int max;
 
 //Create Function
 void create()
 {
     printf("\nEnter the size of queue: ");
-    scanf("%d", &MAX);
+    scanf("%d", &max);
 
-    a = malloc(MAX * sizeof(int));
-    printf("\nQueue of %d is created", MAX);
+    a = malloc(max * sizeof(int));
+    printf("\nQueue of %d is created", max);
 }
 
 //Insert function
@@ -28,7 +28,7 @@ void insert()
     printf("\nEnter the value to be inserted: ");
     scanf("%d", &value);
 
-    if(rear == MAX - 1)
+    if(rear == max - 1)
     {
         printf("\n\nQueue is overflowed....");
     }
@@ -57,12 +57,12 @@ void delete()
     {
         printf("\n\n%d is deleted...", a[front]);
         front = -1;
-        rear = -2;
+        rear = -1;
     }
     else
     {
         printf("\n\n%d is deleted....", a[front]);
-        front = ((front + 1)%MAX);
+        front = ((front + 1)%max);
     }
 }
 
