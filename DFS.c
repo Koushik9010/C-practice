@@ -10,7 +10,7 @@ int n;
 void create()
 {
     int i, j;
-    printf("\nEnter the number of the cities: \n");
+    printf("\nEnter the number of the vertices: \n");
     scanf("%d", &n);
 
     printf("\nEnter the adjacency matrix: \n");
@@ -62,7 +62,7 @@ int main()
                 {
                     visited[i] = 0;
                 }
-                printf("\nEnter the starting city: ");
+                printf("\nEnter the starting vertex: ");
                 scanf("%d", &start);
                 start = start -1;
                 dfs(start);
