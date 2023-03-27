@@ -8,7 +8,7 @@ int matrix[10][10], n, visited[10];
 void create()
 {
     int i, j;
-    printf("\nEnter the number of the cities: \n");
+    printf("\nEnter the number of the vertices: \n");
     scanf("%d", &n);
 
     printf("\nEnter the adjacency matrix: \n");
@@ -27,7 +27,8 @@ void bfs()
 {
     int start, j, i;
     int front = -1, rear = -1, queue[n];
-    printf("\nENter the starting city: ");
+    printf("\nENter the starting vertex: ");
+    scanf("%d", &start);
 
     start = start - 1;
 
